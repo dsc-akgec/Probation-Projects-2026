@@ -1,0 +1,214 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="task0.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <header class="banner">
+      <nav class="nav-bar">
+        <ul class="nav-list">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#register">Register</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="bg-section home-section">
+        <div class="content0">
+          <div class="content1">
+            <h1>Welcome to TECHNOVA '26 - Integrate, Innovate, Inspire.</h1>
+            <p>
+              Technova 2026 is the flagship annual technical festival marking a
+              quarter-century milestone of engineering brilliance and
+              student-led innovation. Back for its monumental 26th edition this
+              state-level summit brings together visionaries, developers, and
+              tech enthusiasts to push the boundaries of modern technology.
+            </p>
+          </div>
+          <img src="Illustration.webp" alt="Illustration" />
+        </div>
+      </section>
+
+      <section id="date-time-venue" class="bg-section dtv-section">
+        <div class="content2">
+          <div class="date">
+            <h1>
+              Mark the Date!
+              <span>&#128197;</span>
+            </h1>
+            <p>
+              Join us for an exciting journey into the world of technology and
+              innovation from <mark>15th - 17th September 2026</mark>
+              <br /><br />Timings: <mark>10:00 AM - 3:00 PM</mark>
+            </p>
+          </div>
+          <div class="venue">
+            <h1>
+              Venue
+              <span>&#128205;</span>
+            </h1>
+            <p><mark> TechNova Convention Center, TechCity, India </mark></p>
+          </div>
+          <div class="register">
+            <input
+              type="button"
+              value="Register Now !"
+              onclick="window.location.href = '#register'"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="events" class="bg-section events-section">
+        <div class="content3">
+          <h1>Events</h1>
+          <div class="event-cards">
+            <div class="cards" id="card1">
+              <div class="card-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h3>Web Development</h3>
+              <p>
+                Master the art of building responsive, high-performance websites
+                using modern frameworks. Learn front-end layouts, back-end
+                logic, and database management to create seamless user
+                experiences.
+              </p>
+              <a href="#web-dev" class="card-link">Learn More &rarr;</a>
+            </div>
+
+            <div class="cards" id="card2">
+              <div class="card-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M12 2a10 10 0 1 0 10 10H12V2z"></path>
+                  <path d="M12 12L2.1 12.1"></path>
+                  <path d="M12 12l7.07-7.07"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </div>
+              <h3>Artificial Intelligence</h3>
+              <p>
+                Dive into machine learning, neural networks, and natural
+                language processing to build smart systems. Explore how
+                data-driven algorithms are redefining automation and solving
+                complex problems.
+              </p>
+              <a href="#ai" class="card-link">Learn More &rarr;</a>
+            </div>
+
+            <div class="cards" id="card3">
+              <div class="card-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="6" y1="12" x2="10" y2="12"></line>
+                  <line x1="8" y1="10" x2="8" y2="14"></line>
+                  <circle cx="15" cy="13" r="1"></circle>
+                  <circle cx="18" cy="11" r="1"></circle>
+                  <rect x="2" y="6" width="20" height="12" rx="6"></rect>
+                </svg>
+              </div>
+              <h3>Gaming</h3>
+              <p>
+                Discover the fundamentals of game design, 3D modeling, and
+                interactive storytelling across popular platforms. Build
+                immersive worlds and interactive mechanics using
+                industry-standard game engines
+              </p>
+              <a href="#gaming" class="card-link">Learn More &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="sch" class="bg-section event-schedule">
+        <div class="content4">
+          <h1>Event Schedule</h1>
+
+          <table class="schedule-table">
+            <thead>
+              <tr>
+                <th>Time</th>
+                <th>Event</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="time-col">10:00 AM</td>
+                <td>Opening Ceremony</td>
+              </tr>
+              <tr>
+                <td class="time-col">11:00 AM</td>
+                <td>Web Development Workshop</td>
+              </tr>
+              <tr>
+                <td class="time-col">1:00 PM</td>
+                <td>AI Challenge</td>
+              </tr>
+              <tr>
+                <td class="time-col">3:00 PM</td>
+                <td>Gaming Tournament</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <h2>TECHNOVA <span>'26</span></h2>
+          <p>Integrate, Innovate, Inspire.</p>
+        </div>
+
+        <div class="footer-socials">
+          <a href="#twitter">Twitter</a>
+          <a href="#github">GitHub</a>
+          <a href="#linkedin">LinkedIn</a>
+          <a href="#instagram">Instagram</a>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-copyright">
+          <p>&copy; 2026 Technova. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
