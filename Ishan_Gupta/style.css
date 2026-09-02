@@ -1,0 +1,665 @@
+/* =========================
+   BASIC RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Space Grotesk", sans-serif;
+    background: #000000;
+    color: #f5f5f5;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================
+   COMMON
+========================= */
+
+:root {
+    --background: #000000;
+    --surface: #11131a;
+    --border: #242631;
+    --text-muted: #9295a3;
+    --accent: #fb0000;
+    --accent-dark: #ff0202;
+}
+
+.eyebrow {
+    color: var(--accent);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+section {
+    width: min(1180px, 90%);
+    margin: auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    background: rgba(8, 9, 13, 0.85);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+    width: min(1180px, 90%);
+    margin: auto;
+
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.logo-symbol {
+    color: var(--accent);
+    margin-right: 7px;
+}
+
+.logo span:last-child {
+    color: var(--accent);
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 680px;
+
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+
+    gap: 50px;
+}
+
+.hero-content h1 {
+    font-size: clamp(4rem, 8vw, 7rem);
+    line-height: 0.95;
+    letter-spacing: -5px;
+    margin-bottom: 30px;
+}
+
+.hero-content h1 {
+    font-size: 70px;
+}
+
+.hero-content h1 span {
+    font-size: 96px;
+}
+
+.hero-content h1 span {
+    color: var(--accent);
+}
+
+.hero-description {
+    max-width: 600px;
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-bottom: 35px;
+}
+
+.event-info {
+    display: flex;
+    gap: 35px;
+    margin-bottom: 40px;
+}
+
+.event-info div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.event-info small {
+    color: var(--text-muted);
+    font-size: 0.65rem;
+    letter-spacing: 1.5px;
+}
+
+.event-info strong {
+    font-size: 0.78rem;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.primary-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 25px;
+
+    background: var(--accent);
+    color: #08090d;
+
+    padding: 15px 22px;
+
+    font-weight: 700;
+    font-size: 0.85rem;
+
+    transition: 0.3s;
+}
+
+.primary-btn span {
+    font-size: 1.2rem;
+}
+
+.primary-btn:hover {
+    background: white;
+    transform: translateY(-4px);
+}
+
+
+/* =========================
+   HERO VISUAL
+========================= */
+
+.hero-visual {
+    height: 500px;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-web {
+    width: 900px;
+    height: 900px;
+    object-fit: contain;
+}
+
+
+/* =========================
+   SECTION HEADINGS
+========================= */
+
+.section-heading {
+    margin-bottom: 55px;
+}
+
+.section-heading h2 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+.section-heading h2 span {
+    color: var(--accent);
+}
+
+.section-heading > p:last-child {
+    color: var(--text-muted);
+}
+
+
+/* =========================
+   EVENTS
+========================= */
+
+.events-section {
+    padding-top: 100px;
+    padding-bottom: 120px;
+}
+
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.event-card {
+    min-height: 390px;
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+
+    padding: 30px;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: 0.35s;
+}
+
+/* FIRST CARD */
+
+.event-card:first-child {
+    background-image: url("Spiderman.jpg");
+    background-size: cover;
+    background-position: center 40%;
+    background-repeat: no-repeat;
+}
+
+.event-card:first-child::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.event-card:first-child > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* SECOND CARD — AI */
+
+.event-card:nth-child(2) {
+    background-image: url("spider.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.event-card:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.event-card:nth-child(2) > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* THIRD CARD — GAMING */
+
+.event-card:nth-child(3) {
+    background-image: url("Sspider.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.event-card:nth-child(3)::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.event-card:nth-child(3) > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+.event-card:hover {
+    transform: translateY(-10px);
+    border-color: #ff0000;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.event-icon {
+    width: 65px;
+    height: 65px;
+
+    border: 1px solid var(--border);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 700;
+    font-size: 1.3rem;
+
+    color: var(--accent);
+
+    margin-bottom: 60px;
+}
+
+.event-number {
+    display: none;
+}
+
+.event-card h3 {
+    font-size: 1.45rem;
+    margin-bottom: 15px;
+}
+
+.event-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.learn-more {
+    margin-top: auto;
+
+    color: var(--accent);
+
+    font-size: 0.8rem;
+    font-weight: 700;
+
+    display: flex;
+    gap: 10px;
+
+    transition: 0.3s;
+}
+
+.learn-more:hover {
+    gap: 18px;
+}
+
+
+/* =========================
+   SCHEDULE
+========================= */
+
+.schedule-section {
+    padding-top: 80px;
+    padding-bottom: 120px;
+}
+
+.schedule-container {
+    border-top: 1px solid var(--border);
+}
+
+.schedule-row {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr;
+
+    padding: 22px 15px;
+
+    border-bottom: 1px solid var(--border);
+
+    transition: 0.3s;
+}
+
+.schedule-row:hover {
+    background: var(--surface);
+}
+
+.schedule-row span {
+    color: var(--accent);
+    font-size: 0.85rem;
+}
+
+.schedule-row strong {
+    font-size: 0.95rem;
+}
+
+.schedule-header {
+    color: var(--text-muted);
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+}
+
+.schedule-header span {
+    color: var(--text-muted);
+}
+
+
+/* =========================
+   REGISTER
+========================= */
+
+.register-section {
+    padding: 0;
+
+    background-image: url("spidey.jpg");
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+}
+
+.register-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.register-box {
+    background: transparent;
+    color: white;
+
+    padding: 45px;
+
+    text-align: center;
+
+    position: relative;
+    z-index: 1;
+}
+
+.register-box .eyebrow {
+    color: white;
+}
+
+.register-box h2 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+.register-box h2 span {
+    display: block;
+}
+
+.register-box > p:not(.eyebrow) {
+    max-width: 550px;
+    margin: 0 auto 30px;
+
+    font-size: 0.95rem;
+}
+
+.register-box .primary-btn {
+    background: #08090d;
+    color: white;
+}
+
+.register-box .primary-btn:hover {
+    background: white;
+    color: #08090d;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    
+
+    width: min(1400px, 90%);
+    margin: auto;
+
+    padding: 70px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: var(--text-muted);
+
+    font-size: 0.75rem;
+}
+
+.footer-logo {
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.footer-logo span {
+    color: var(--accent);
+}
+
+.social-links {
+    display: flex;
+    gap: 25px;
+}
+
+.social-links a {
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--accent);
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 70px;
+        padding-bottom: 50px;
+    }
+
+    .hero-visual {
+        height: 400px;
+    }
+
+    .event-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .event-card {
+        min-height: 330px;
+    }
+
+    .footer {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .navbar {
+        height: auto;
+        padding: 20px 0;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .nav-links a {
+        font-size: 0.7rem;
+    }
+
+    .hero-content h1 {
+        font-size: 4rem;
+        letter-spacing: -3px;
+    }
+
+    .event-info {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-visual {
+        height: 330px;
+        transform: scale(0.8);
+    }
+
+    .orbit-two {
+        width: 390px;
+        height: 390px;
+    }
+
+    .orbit-one {
+        width: 320px;
+        height: 320px;
+    }
+
+    .tech-circle {
+        width: 230px;
+        height: 230px;
+    }
+
+    .circle-content {
+        width: 160px;
+        height: 160px;
+    }
+
+    .floating-card {
+        transform: scale(0.8);
+    }
+
+    .schedule-row {
+        grid-template-columns: 0.8fr 2fr;
+    }
+
+    .register-box {
+        padding: 45px 20px;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .social-links {
+        gap: 15px;
+    }
+}
