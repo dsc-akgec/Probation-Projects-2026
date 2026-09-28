@@ -1,3 +1,5 @@
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+
 {
   "project_info": {
     "project_number": "408503604102",
@@ -15,7 +17,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyA37eSbHX3n57tM1brCto9jqKsUzB2gJy4"
+          "current_key": dotenv.get("GEMENi_API_KEY");
         }
       ],
       "services": {
