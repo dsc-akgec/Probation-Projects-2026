@@ -1,0 +1,31 @@
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+
+{
+  "project_info": {
+    "project_number": "408503604102",
+    "project_id": "cvity-fb4d5",
+    "storage_bucket": "cvity-fb4d5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:408503604102:android:e440aaf38098ba11029207",
+        "android_client_info": {
+          "package_name": "com.example.cvity"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": dotenv.get("GEMENi_API_KEY");
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
